@@ -16,6 +16,11 @@
   }
 }
 
+@font-face {
+  font-family: "Pretendard";
+  src: "/public/font/PretendardVariable.woff2" format("woff2");
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -24,4 +29,5 @@ body {
       rgb(var(--background-start-rgb))
     )
     rgb(var(--background-end-rgb));
+  font-family: "Pretendard", sans-serif;
 }
