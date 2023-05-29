@@ -2,9 +2,12 @@ import MainNews from "@/components/MainNews";
 import CustomSwiper from "@/components/Swiper";
 import Image from "next/image";
 import axios from "axios";
-import { INewsList } from "@/Interfaces/INewsList";
+import { INewsList, IYoutubeList } from "@/Interfaces/mainpage";
+import MainYoutube from "@/components/MainYoutube";
 
-export default function Home({ newsList }: INewsList) {
+interface IHome extends INewsList, IYoutubeList {}
+
+export default function Home({ newsList, youtubeList }: IHome) {
   return (
     <main className={"w-[100vw] flex flex-col bg-blue-300"}>
       {/* Swiper Rendering Component */}
@@ -38,17 +41,26 @@ export default function Home({ newsList }: INewsList) {
       <div className="w-full h-[41.67vw] bg-[#F8F8FA] flex flex-col items-center justify-center">
         <MainNews newsList={newsList} />
       </div>
+      <div className="w-full h-[40vw] bg-[#F1F1F5] flex flex-col items-center justify-center">
+        <MainYoutube youtubeList={youtubeList} />
+      </div>
     </main>
   );
 }
 
 export const getServerSideProps = async () => {
-  const res = await axios.get(
+  const newsRes = await axios.get(
     `${process.env.NEXT_PUBLIC_BACKEND_ADDRESS}/news/recent`
   );
+
+  const youtubeRes = await axios.get(
+    `${`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCldf-sx1NRh0Tls03EpTySA&maxResults=2&type=video&order=date&key=${process.env.NEXT_PUBLIC_API_KEY}`}`
+  );
+
   return {
     props: {
-      newsList: res.data.newsData,
+      newsList: newsRes.data.newsData,
+      youtubeList: youtubeRes.data.items.map((item: any) => item.id.videoId),
     },
   };
 };
