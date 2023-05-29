@@ -1,4 +1,4 @@
-import { INewsList } from "@/Interfaces/INewsList";
+import { INewsList } from "@/Interfaces/mainpage";
 import Image from "next/image";
 
 const NewsCard = ({ news }: any) => {
@@ -11,6 +11,7 @@ const NewsCard = ({ news }: any) => {
           src={news.imageSrc.data}
           alt="sgaem_news"
           fill
+          sizes={"100%"}
           style={{ objectFit: "cover" }}
         />
       </div>
@@ -28,7 +29,7 @@ const NewsCard = ({ news }: any) => {
 };
 
 const MainNews = ({ newsList }: INewsList) => {
-  console.log(newsList);
+  // console.log(newsList);
   return (
     <>
       <div className="text-[2.083vw] font-semibold mb-1">NEWS</div>
