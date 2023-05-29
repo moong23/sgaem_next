@@ -30,4 +30,15 @@ body {
     )
     rgb(var(--background-end-rgb));
   font-family: "Pretendard", sans-serif;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.text-ellipsis-multi-line {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex-grow: 1;
+  text-overflow: ellipsis;
 }
