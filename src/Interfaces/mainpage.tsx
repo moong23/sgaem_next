@@ -10,3 +10,7 @@ export interface INewsList {
     newstype: "sgaem" | "comp";
   }[];
 }
+
+export interface IYoutubeList {
+  youtubeList: string[];
+}
