@@ -4,12 +4,13 @@ import Image from "next/image";
 import axios from "axios";
 import { INewsList, IYoutubeList } from "@/Interfaces/mainpage";
 import MainYoutube from "@/components/MainYoutube";
+import Bottombar from "@/components/Bottombar";
 
 interface IHome extends INewsList, IYoutubeList {}
 
 export default function Home({ newsList, youtubeList }: IHome) {
   return (
-    <main className={"w-[100vw] flex flex-col bg-blue-300"}>
+    <main className={"w-[100vw] flex flex-col bg-gray-300"}>
       {/* Swiper Rendering Component */}
       <CustomSwiper />
       {/* 4E Rendering Component*/}
@@ -44,6 +45,7 @@ export default function Home({ newsList, youtubeList }: IHome) {
       <div className="w-full h-[40vw] bg-[#F1F1F5] flex flex-col items-center justify-center">
         <MainYoutube youtubeList={youtubeList} />
       </div>
+      <Bottombar />
     </main>
   );
 }

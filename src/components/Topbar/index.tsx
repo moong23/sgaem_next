@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import TopbarMenuList from "../../constants/topbarMenuList";
+import TopbarMenuList from "@/constants/topbarMenuList";
 
 const Topbar = () => {
   return (
-    <div className="w-full h-[5rem] flex items-center justify-center bg-red-200">
+    <div className="w-full h-[5rem] flex items-center justify-center">
       {/* Responsive: min width needed */}
-      <div className="w-[max(62.5vw,75rem)] h-full flex flex-row gap-12 justify-between items-center bg-red-400">
+      <div className="w-[max(62.5vw,75rem)] h-full flex flex-row gap-12 justify-between items-center">
         {/* App Logo Divider */}
         <Link
           href="/"
