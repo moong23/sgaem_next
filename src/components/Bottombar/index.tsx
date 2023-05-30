@@ -18,7 +18,7 @@ const Bottombar = () => {
             />
           </div>
           {/* Creater Information Divider */}
-          <div className="w-full h-full flex flex-col justify-center items-center text-white gap-5">
+          <div className="w-full h-full flex flex-col justify-center items-center text-white gap-[0.833vw]">
             <div className="w-fit h-fit flex flex-col justify-start border-y-2 border-white py-1 text-[0.938vw]">
               <p>
                 주소 : 서울특별시 마포구 백범로 35 (서강대학교 엠마오관 132호)
