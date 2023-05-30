@@ -12,6 +12,7 @@ const NewsCard = ({ news }: any) => {
           alt="sgaem_news"
           fill
           sizes={"100%"}
+          draggable={false}
           style={{ objectFit: "cover" }}
         />
       </div>

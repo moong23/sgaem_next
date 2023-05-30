@@ -32,6 +32,10 @@ body {
   font-family: "Pretendard", sans-serif;
   user-select: none;
   box-sizing: border-box;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
 }
 
 .text-ellipsis-multi-line {

@@ -1,8 +1,10 @@
+import Banner from "@/components/Banner";
+
 const AboutUs = () => {
   return (
-    <>
-      <>AboutUS</>
-    </>
+    <div className="w-[100vw] flex flex-col bg-gray-300">
+      <Banner imgSrc="/images/banners/aboutUs.svg" />
+    </div>
   );
 };
 
