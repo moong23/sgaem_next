@@ -5,9 +5,9 @@ import TopbarMenuList from "@/constants/TopbarMenuList";
 
 const Topbar = () => {
   return (
-    <div className="w-full h-[5rem] flex items-center justify-center">
+    <div className="w-full h-[5rem] flex items-center justify-center xl:bg-white bg-red-200">
       {/* Responsive: min width needed */}
-      <div className="w-[max(62.5vw,75rem)] h-full flex flex-row gap-12 justify-between items-center">
+      <div className="w-[max(62.5vw,80rem)] h-full flex flex-row gap-12 justify-between items-center">
         {/* App Logo Divider */}
         <Link
           href="/"
