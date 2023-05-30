@@ -47,7 +47,6 @@ export default function Home({ newsList, youtubeList }: IHome) {
       <div className="w-full h-[40vw] bg-[#F1F1F5] flex flex-col items-center justify-center">
         <MainYoutube youtubeList={youtubeList} />
       </div>
-      <Bottombar />
     </main>
   );
 }
