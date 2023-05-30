@@ -11,6 +11,7 @@ const Topbar = () => {
         {/* App Logo Divider */}
         <Link
           href="/"
+          draggable={false}
           className={
             "flex w-[4.375rem] h-[3.125rem] flex-row items-center relative"
           }
@@ -20,6 +21,7 @@ const Topbar = () => {
             alt="sgaemLogo"
             fill
             priority
+            draggable={false}
             style={{ objectFit: "contain" }}
           />
         </Link>
@@ -32,6 +34,7 @@ const Topbar = () => {
           {TopbarMenuList.map((item, index) => {
             return (
               <Link
+                draggable={false}
                 className="h-full flex items-center"
                 href={item.link}
                 key={index}
@@ -48,10 +51,16 @@ const Topbar = () => {
           }
         >
           {/* TODO: Auth 여부에 따른 분기처리 필요 */}
-          <Link href="/login">
+          <Link
+            draggable={false}
+            href="/login"
+          >
             <span>로그인</span>
           </Link>
-          <Link href="/signup">
+          <Link
+            draggable={false}
+            href="/signup"
+          >
             <span>회원가입</span>
           </Link>
         </div>

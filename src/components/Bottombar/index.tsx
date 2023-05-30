@@ -14,6 +14,7 @@ const Bottombar = () => {
               src="/images/appLogo_white.svg"
               alt="appLogo"
               fill
+              draggable={false}
               style={{ objectFit: "contain" }}
             />
           </div>
@@ -39,6 +40,7 @@ const Bottombar = () => {
               return (
                 <Link
                   href={item.link}
+                  draggable={false}
                   className="w-[2.083vw] h-[2.083vw] relative"
                   key={index}
                   target="_blank"
@@ -48,6 +50,7 @@ const Bottombar = () => {
                     src={item.src}
                     alt={item.name}
                     fill
+                    draggable={false}
                     style={{ objectFit: "contain" }}
                   />
                 </Link>
