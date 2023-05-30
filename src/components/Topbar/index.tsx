@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import TopbarMenuList from "../../constants/topbarMenuList";
+import TopbarMenuList from "@/constants/TopbarMenuList";
 
 const Topbar = () => {
   return (
